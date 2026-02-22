@@ -16,10 +16,11 @@ export default defineNuxtPlugin((nuxtApp) => {
   // ✅ แนบ token ทุกครั้งที่ request
   api.interceptors.request.use((req) => {
     // รองรับทั้ง store และ localStorage
-    const token =
-      auth.token ||
-      localStorage.getItem('auth_token') ||
-      localStorage.getItem('accessToken')
+    let storageToken = null
+    if (typeof localStorage !== 'undefined') {
+      storageToken = localStorage.getItem('auth_token') || localStorage.getItem('accessToken')
+    }
+    const token = auth.token || storageToken
 
     if (token) {
       req.headers = req.headers || {}

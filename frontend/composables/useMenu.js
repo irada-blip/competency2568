@@ -23,9 +23,10 @@ const MAP = {
         { label: 'Users',         to: '/users',            icon: 'mdi-account-cog-outline' },
         { label: 'Periods',       to: '/admin/periods',    icon: 'mdi-calendar-range' },
         { label: 'Topics',        to: '/admin/topics',     icon: 'mdi-format-list-bulleted' },
+        { label: 'Indicators',    to: '/admin/indicators', icon: 'mdi-chart-box-outline' },
         { label: 'Assignments',   to: '/admin/assignments',icon: 'mdi-account-multiple-check' },
+        { label: 'Results',       to: '/admin/results',    icon: 'mdi-chart-line' },
         { label: 'Monitor',       to: '/admin/monitor',    icon: 'mdi-progress-check' },
-        { label: 'Reports',       to: '/reports',          icon: 'mdi-chart-areaspline' },
         { label: 'Settings',      to: '/settings',         icon: 'mdi-cog-outline' },
         { label: 'API Docs', href: 'http://localhost:7000/docs', target: '_blank', icon: 'mdi-book-open-outline' },
       ]

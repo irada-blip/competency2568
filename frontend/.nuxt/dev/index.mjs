@@ -3,40 +3,40 @@ import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/h3/dist/index.mjs';
-import { escapeHtml } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/@vue/shared/dist/shared.cjs.js';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/vue/server-renderer/index.mjs';
-import { klona } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/defu/dist/defu.mjs';
-import destr, { destr as destr$1 } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/destr/dist/index.mjs';
-import { snakeCase } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/scule/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/unhead/dist/server.mjs';
-import { stringify, uneval } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/devalue/index.js';
-import { isVNode, toValue, isRef } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/vue/index.mjs';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/unhead/dist/plugins.mjs';
-import { createHooks } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/ohash/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/radix3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, createError, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/h3/dist/index.mjs';
+import { escapeHtml } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/@vue/shared/dist/shared.cjs.js';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, joinRelativeURL } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/vue/server-renderer/index.mjs';
+import { klona } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/defu/dist/defu.mjs';
+import destr, { destr as destr$1 } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/destr/dist/index.mjs';
+import { snakeCase } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/scule/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/unhead/dist/server.mjs';
+import { stringify, uneval } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/devalue/index.js';
+import { isVNode, toValue, isRef } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/vue/index.mjs';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/unhead/dist/plugins.mjs';
+import { createHooks } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/systemdevelop/competency2568/frontend/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/ohash/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/youch-core/build/index.js';
-import { Youch } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1 } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/youch-core/build/index.js';
+import { Youch } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { getContext } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/unctx/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/errx/dist/index.js';
+import { getContext } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/unctx/dist/index.mjs';
+import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/errx/dist/index.js';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$1 } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/pathe/dist/index.mjs';
-import { walkResolver } from 'file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/node_modules/unhead/dist/utils.mjs';
+import { dirname as dirname$1, resolve as resolve$1 } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/pathe/dist/index.mjs';
+import { walkResolver } from 'file://C:/systemdevelop/competency2568/frontend/node_modules/unhead/dist/utils.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"D:/project_pes_2568/skill_test_2568_v2-2/frontend/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/systemdevelop/competency2568/frontend/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -48,11 +48,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:/project_pes_2568/skill_test_2568_v2-2/frontend","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"D:/project_pes_2568/skill_test_2568_v2-2/frontend/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:/project_pes_2568/skill_test_2568_v2-2/frontend/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"D:/project_pes_2568/skill_test_2568_v2-2/frontend/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"D:/project_pes_2568/skill_test_2568_v2-2/frontend/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/systemdevelop/competency2568/frontend","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/systemdevelop/competency2568/frontend/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/systemdevelop/competency2568/frontend/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/systemdevelop/competency2568/frontend/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:/systemdevelop/competency2568/frontend/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -1003,7 +1003,7 @@ async function errorHandler(error, event) {
   // H3 will handle fallback
 }
 
-const rootDir = "D:/project_pes_2568/skill_test_2568_v2-2/frontend";
+const rootDir = "C:/systemdevelop/competency2568/frontend";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
 
@@ -1022,7 +1022,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _K7STgnrN0_RcrKuKz8mhtCMLvAo05dac8Q041OGeYDc = (nitroApp) => {
+const _gXsOltl8l4NVdJOIgMWVAoxiobttta0gsxfv6nKLfQ = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -1092,7 +1092,7 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _K7STgnrN0_RcrKuKz8mhtCMLvAo05dac8Q041OGeYDc
+  _gXsOltl8l4NVdJOIgMWVAoxiobttta0gsxfv6nKLfQ
 ];
 
 const assets = {};
@@ -1120,7 +1120,7 @@ function getAsset (id) {
 
 const METHODS = /* @__PURE__ */ new Set(["HEAD", "GET"]);
 const EncodingMap = { gzip: ".gz", br: ".br" };
-const _z1afrC = eventHandler((event) => {
+const _tdAN9v = eventHandler((event) => {
   if (event.method && !METHODS.has(event.method)) {
     return;
   }
@@ -1224,7 +1224,7 @@ function createSSRContext(event) {
     url: event.path,
     event,
     runtimeConfig: useRuntimeConfig(event),
-    noSSR: event.context.nuxt?.noSSR || (false),
+    noSSR: true,
     head: createHead(unheadOptions),
     error: false,
     nuxt: void 0,
@@ -1255,8 +1255,8 @@ function publicAssetsURL(...path) {
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getServerEntry = () => import('file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/.nuxt//dist/server/server.mjs').then((r) => r.default || r);
-const getClientManifest = () => import('file://D:/project_pes_2568/skill_test_2568_v2-2/frontend/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => Promise.resolve().then(function () { return server$1; }).then((r) => r.default || r);
+const getClientManifest = () => import('file://C:/systemdevelop/competency2568/frontend/.nuxt//dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {
@@ -1324,7 +1324,7 @@ function lazyCachedFunction(fn) {
   };
 }
 function getRenderer(ssrContext) {
-  return ssrContext.noSSR ? getSPARenderer() : getSSRRenderer();
+  return getSPARenderer() ;
 }
 const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
 
@@ -1502,13 +1502,13 @@ async function getIslandContext(event) {
   return ctx;
 }
 
-const _lazy_r8_UL8 = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_gEESFY = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '', handler: _z1afrC, lazy: false, middleware: true, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_r8_UL8, lazy: true, middleware: false, method: undefined },
+  { route: '', handler: _tdAN9v, lazy: false, middleware: true, method: undefined },
+  { route: '/__nuxt_error', handler: _lazy_gEESFY, lazy: true, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: _SxA8c9, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_r8_UL8, lazy: true, middleware: false, method: undefined }
+  { route: '/**', handler: _lazy_gEESFY, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -1739,7 +1739,7 @@ parentPort?.on("message", (msg) => {
   }
 });
 const nitroApp = useNitroApp();
-const server = new Server(toNodeListener(nitroApp.h3App));
+const server$2 = new Server(toNodeListener(nitroApp.h3App));
 let listener;
 listen().catch(() => listen(
   true
@@ -1779,8 +1779,8 @@ function listen(useRandomPort = Boolean(
 )) {
   return new Promise((resolve, reject) => {
     try {
-      listener = server.listen(useRandomPort ? 0 : getSocketAddress(), () => {
-        const address = server.address();
+      listener = server$2.listen(useRandomPort ? 0 : getSocketAddress(), () => {
+        const address = server$2.address();
         parentPort?.postMessage({
           event: "listen",
           address: typeof address === "string" ? { socketPath: address } : { host: "localhost", port: address?.port }
@@ -1806,7 +1806,7 @@ function getSocketAddress() {
   return join(tmpdir(), socketName);
 }
 async function shutdown() {
-  server.closeAllConnections?.();
+  server$2.closeAllConnections?.();
   await Promise.all([
     new Promise((resolve) => listener?.close(resolve)),
     nitroApp.hooks.callHook("close").catch(console.error)
@@ -1823,6 +1823,13 @@ const template$1 = (messages) => {
 const errorDev = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   template: template$1
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const server = () => {};
+
+const server$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: server
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const template = "";
@@ -1856,7 +1863,7 @@ function renderPayloadJsonScript(opts) {
     "type": "application/json",
     "innerHTML": contents,
     "data-nuxt-data": appId,
-    "data-ssr": !(opts.ssrContext.noSSR)
+    "data-ssr": false
   };
   {
     payload.id = "__NUXT_DATA__";
@@ -1914,7 +1921,7 @@ const renderer = defineRenderHandler(async (event) => {
   if (routeOptions.ssr === false) {
     ssrContext.noSSR = true;
   }
-  const renderer = await getRenderer(ssrContext);
+  const renderer = await getRenderer();
   const _rendered = await renderer.renderToString(ssrContext).catch(async (error) => {
     if (ssrContext._renderResponse && error.message === "skipping render") {
       return {};

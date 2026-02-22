@@ -50,18 +50,34 @@ app.use(
 const userRoutes = require("./routes/users.routes");
 const authRoutes = require("./routes/auth.routes");
 const uploadRoutes = require("./routes/upload.routes");
+const topicsRoutes = require("./routes/topics.routes");
+const indicatorsRoutes = require("./routes/indicators.routes");
+const periodsRoutes = require("./routes/periods.routes");
+const assignmentsRoutes = require("./routes/assignments.routes");
+const resultsRoutes = require("./routes/results.routes");
+const departmentsRoutes = require("./routes/departments.routes");
 
 // http://localhost:7000/api/auth/login
-// app.use('/api/auth', require('./routes/auth.routes'));
 app.use("/api/auth", authRoutes);
 // http://localhost:7000/api/users
 app.use("/api/users", userRoutes);
 // http://localhost:7000/api/upload
 app.use("/api/upload", uploadRoutes);
-// จะได้ /api/periods/active, /api/indicators, ...
+// http://localhost:7000/api/topics
+app.use("/api/topics", topicsRoutes);
+// http://localhost:7000/api/indicators
+app.use("/api/indicators", indicatorsRoutes);
+// http://localhost:7000/api/periods
+app.use("/api/periods", periodsRoutes);
+// http://localhost:7000/api/assignments
+app.use("/api/assignments", assignmentsRoutes);
+// http://localhost:7000/api/results
+app.use("/api/results", resultsRoutes);
+// http://localhost:7000/api/departments
+app.use("/api/departments", departmentsRoutes);
 
-// << เส้นทางสำหรับ Period/Indicator/EvidenceType และ POST /attachments
-app.use("/api", attachmentsApi);           // จะได้ /api/periods/active, /api/indicators, ...
+// << เส้นทางสำหรับ attachments และ GET /api/periods/active, GET /api/indicators, etc.
+app.use("/api", attachmentsApi);           // จะได้ /api/periods/active, /api/indicators (legacy), /api/attachments
 
 
 app.use((req, res, next) => {

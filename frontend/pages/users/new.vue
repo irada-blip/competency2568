@@ -92,7 +92,7 @@ const router = useRouter();
 const errorMsg = ref("");
 const showPassword = ref(false); // ✅ state สำหรับ toggle แสดง/ซ่อนรหัสผ่าน
 
-const token = localStorage.getItem("auth_token"); // ดูชื่อ key ให้ตรงกับที่เก็บไว้
+const token = typeof localStorage !== 'undefined' ? localStorage.getItem("auth_token") : null; // ดูชื่อ key ให้ตรงกับที่เก็บไว้
 
 const vals = ref({
   name_th: "",

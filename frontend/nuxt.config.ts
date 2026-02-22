@@ -36,6 +36,8 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 export default defineNuxtConfig({
+  ssr: false, // ✅ Disable SSR for client-side SPA
+  
    // ✅ ตั้งค่า compatibilityDate ตามที่ Nuxt เตือน
  nitro: {
     compatibilityDate: '2025-10-12', // 🔥 วันที่ตามที่ Nuxt แนะนำใน warning
@@ -67,7 +69,7 @@ export default defineNuxtConfig({
 
   build: { transpile: ['vuetify'] },
   vite: {
-    ssr: { noExternal: ['vuetify'] },
+    ssr: { noExternal: ['vuetify', '@vue/devtools-kit'] },
     plugins: [vuetify({ autoImport: true })],
     vue: { template: { transformAssetUrls } }
   }
